@@ -16,8 +16,8 @@
 .prettierignore
 
 # Ignore SASS files
-.scss
+*.scss
 
 # Ignore instructions from FrontEndMentor.io
 instruction.md
-style-guide.md
+style_guide.md
