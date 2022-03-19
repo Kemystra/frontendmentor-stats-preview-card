@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #090b1a;
+}
+
+main {
+  background-color: #1b1938;
+}
+
+main h1 {
+  color: white;
+}
+
+main p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.stats span {
+  color: white;
+}
+
+.stats p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#attribution {
+  color: rgba(255, 255, 255, 0.75);
+}
