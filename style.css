@@ -4,17 +4,30 @@
 
 body {
   background-color: #090b1a;
+  height: 100vh;
 }
 
 main {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+}
+
+picture {
+  max-width: fit-content;
+}
+
+#main-card {
   background-color: #1b1938;
 }
 
-main h1 {
+#main-card h1 {
   color: white;
 }
 
-main p {
+#main-card p {
   color: rgba(255, 255, 255, 0.75);
 }
 
