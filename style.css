@@ -3,13 +3,19 @@
 }
 
 body {
-  background-color: #090b1a;
+  background-color: hsl(233deg, 47%, 7%);
   height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   display: flex;
   flex-direction: row-reverse;
+  background-color: hsl(244deg, 38%, 16%);
   width: 80%;
   height: fit-content;
   margin: auto;
@@ -20,25 +26,30 @@ picture {
 }
 
 #main-card {
-  background-color: #1b1938;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 #main-card h1 {
   color: white;
+  font-family: "Inter", sans-serif;
 }
-
 #main-card p {
-  color: rgba(255, 255, 255, 0.75);
+  color: hsla(0deg, 0%, 100%, 0.75);
 }
 
 .stats span {
   color: white;
 }
-
 .stats p {
-  color: rgba(255, 255, 255, 0.6);
+  color: hsla(0deg, 0%, 100%, 0.6);
 }
 
 #attribution {
-  color: rgba(255, 255, 255, 0.75);
+  color: hsla(0deg, 0%, 100%, 0.75);
+  position: absolute;
+  bottom: 0;
 }
+
+/*# sourceMappingURL=style.css.map */
