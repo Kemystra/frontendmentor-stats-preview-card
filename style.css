@@ -34,6 +34,7 @@ picture {
 #main-card h1 {
   color: white;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 #main-card p {
   color: hsla(0deg, 0%, 100%, 0.75);
