@@ -29,32 +29,39 @@ h1, h2 {
   color: white;
   margin: 0;
 }
+h1 span, h2 span {
+  color: hsl(277deg, 64%, 61%);
+}
+
+p {
+  font-size: 15px;
+}
 
 picture {
   max-width: fit-content;
 }
 
 #main-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-right: 8rem;
   padding-left: 4rem;
 }
-#main-card p {
+
+#description {
+  margin-top: 2rem;
   color: hsla(0deg, 0%, 100%, 0.75);
-  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
 #stats-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 6rem;
 }
 
 .stats h2 {
@@ -62,6 +69,7 @@ picture {
   margin: 0;
 }
 .stats p {
+  font-family: "Lexend Deca", sans-serif;
   color: hsla(0deg, 0%, 100%, 0.6);
   margin: 0;
 }
