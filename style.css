@@ -21,6 +21,7 @@ main {
   height: 446px;
   padding: 0;
   margin: auto;
+  border-radius: 8px;
 }
 
 h1, h2 {
@@ -38,7 +39,24 @@ p {
 }
 
 picture {
+  position: relative;
   max-width: fit-content;
+  background: hsl(277deg, 64%, 61%);
+}
+picture source, picture img {
+  filter: opacity(0%);
+  filter: brightness(100%);
+  mix-blend-mode: multiply;
+}
+picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277deg, 64%, 61%);
+  opacity: 0.3;
 }
 
 #main-card {
@@ -53,6 +71,7 @@ picture {
   color: hsla(0deg, 0%, 100%, 0.75);
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  line-height: 1.6rem;
 }
 
 #stats-container {
@@ -72,6 +91,8 @@ picture {
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0deg, 0%, 100%, 0.6);
   margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
 }
 
 #attribution {
