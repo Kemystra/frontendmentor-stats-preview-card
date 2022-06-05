@@ -43,6 +43,7 @@ picture {
   position: relative;
   max-width: fit-content;
   background: hsl(277deg, 64%, 61%);
+  max-width: 100%;
 }
 picture source, picture img {
   filter: opacity(0%);
@@ -61,10 +62,12 @@ picture::after {
 }
 
 #main-card {
-  padding-bottom: 2rem;
-  padding-top: 4rem;
-  padding-right: 8rem;
-  padding-left: 4rem;
+  padding: 4rem 8rem 2rem 4rem;
+  /* Format of shorthands: top right bottom left
+     OR top right-left bottom
+     OR top-bottom right-left
+     OR all
+  */
 }
 
 #description {
