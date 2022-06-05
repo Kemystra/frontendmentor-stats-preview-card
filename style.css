@@ -18,6 +18,7 @@ main {
   flex-direction: row-reverse;
   background-color: hsl(244deg, 38%, 16%);
   width: 80%;
+  max-width: 1115px;
   height: 446px;
   padding: 0;
   margin: auto;
