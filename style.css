@@ -14,13 +14,10 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: row-reverse;
+  max-width: min(1115px, 80%);
+  max-height: 446px;
+  aspect-ratio: 2.5;
   background-color: hsl(244deg, 38%, 16%);
-  width: 80%;
-  max-width: 1115px;
-  height: 446px;
-  padding: 0;
   margin: auto;
   border-radius: 8px;
 }
@@ -41,11 +38,13 @@ p {
 
 picture {
   position: relative;
-  max-width: fit-content;
   background: hsl(277deg, 64%, 61%);
-  max-width: 100%;
+  float: right;
+  height: 100%;
+  width: 48%;
 }
 picture source, picture img {
+  max-height: 100%;
   filter: opacity(0%);
   filter: brightness(100%);
   mix-blend-mode: multiply;
@@ -62,7 +61,14 @@ picture::after {
 }
 
 #main-card {
-  padding: 4rem 8rem 2rem 4rem;
+  padding: 12vh 8vw 10vh 4rem;
+  float: right;
+  width: 52%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   /* Format of shorthands: top right bottom left
      OR top right-left bottom
      OR top-bottom right-left
@@ -70,12 +76,19 @@ picture::after {
   */
 }
 
+#title {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
 #description {
-  margin-top: 2rem;
   color: hsla(0deg, 0%, 100%, 0.75);
+  max-width: 350px;
+  text-align: left;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  line-height: 1.6rem;
+  margin-bottom: auto;
+  line-height: 1.55rem;
 }
 
 #stats-container {
@@ -84,7 +97,6 @@ picture::after {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 6rem;
 }
 
 .stats h2 {
