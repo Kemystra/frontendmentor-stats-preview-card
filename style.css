@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  max-width: min(1115px, 80%);
+  width: min(1115px, 80%);
   max-height: 446px;
   aspect-ratio: 2.5;
   background-color: hsl(244deg, 38%, 16%);
@@ -61,7 +61,7 @@ picture::after {
 }
 
 #main-card {
-  padding: 12vh 8vw 10vh 4rem;
+  padding: min(12vh, 4rem) min(8vw, 8rem) min(10vh, 4rem) min(5vw, 5rem);
   float: right;
   width: 52%;
   height: 100%;
@@ -78,7 +78,7 @@ picture::after {
 
 #title {
   font-size: 2.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 #description {
@@ -97,6 +97,7 @@ picture::after {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 350px;
 }
 
 .stats h2 {
