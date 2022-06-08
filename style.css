@@ -109,13 +109,14 @@ picture::after {
 .stats h2 {
   color: white;
   margin: 0;
+  font-size: 1.7vw;
 }
 .stats p {
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0deg, 0%, 100%, 0.6);
   margin: 0;
   font-size: 0.85rem;
-  line-height: 1.55rem;
+  margin-top: 0.4rem;
 }
 
 #attribution {
@@ -124,18 +125,10 @@ picture::after {
   bottom: 0;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
   #main-card {
     height: 80%;
     width: 35%;
-  }
-
-  #title {
-    font-size: 1.7rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
   }
 }
 
