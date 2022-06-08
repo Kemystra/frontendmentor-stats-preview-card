@@ -45,6 +45,7 @@ picture {
   background: hsl(277deg, 64%, 61%);
   height: 100%;
   border-radius: 0 8px 8px 0;
+  aspect-ratio: 540/446;
 }
 picture source, picture img {
   max-width: 100%;
