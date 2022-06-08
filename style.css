@@ -20,6 +20,10 @@ main {
   background-color: hsl(244deg, 38%, 16%);
   margin: auto;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1, h2 {
@@ -63,7 +67,6 @@ picture::after {
 
 #main-card {
   padding: min(6%, 4rem) min(10%, 8rem) min(5%, 4rem) min(7%, 5rem);
-  width: 52%;
   height: 100%;
   display: flex;
   flex-direction: column;
