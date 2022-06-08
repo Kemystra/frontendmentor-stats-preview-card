@@ -67,8 +67,9 @@ picture::after {
 }
 
 #main-card {
-  padding: min(6%, 4rem) min(10%, 8rem) min(5%, 4rem) min(7%, 5rem);
-  height: 100%;
+  height: 71%;
+  margin-left: 5vw;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,7 +83,7 @@ picture::after {
 }
 
 #title {
-  font-size: 2.25rem;
+  font-size: 2.65vw;
   margin-bottom: 2.5%;
 }
 
@@ -124,6 +125,11 @@ picture::after {
 }
 
 @media only screen and (max-width: 1200px) {
+  #main-card {
+    height: 80%;
+    width: 35%;
+  }
+
   #title {
     font-size: 1.7rem;
   }
