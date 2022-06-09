@@ -84,14 +84,13 @@ picture::after {
 
 #title {
   font-size: 2.65vw;
-  margin-bottom: 2vh;
+  margin-bottom: 2.5%;
 }
 
 #description {
   color: hsla(0deg, 0%, 100%, 0.75);
   max-width: 350px;
   text-align: left;
-  font-size: 100%;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin-bottom: auto;
@@ -99,7 +98,6 @@ picture::after {
 }
 
 #stats-container {
-  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -117,7 +115,7 @@ picture::after {
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0deg, 0%, 100%, 0.6);
   margin: 0;
-  font-size: 85%;
+  font-size: 0.85rem;
   margin-top: 0.4rem;
 }
 
@@ -127,7 +125,7 @@ picture::after {
   bottom: 0;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 901px) {
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
   #main-card {
     height: 80%;
     width: 35%;
