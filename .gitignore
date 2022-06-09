@@ -15,9 +15,6 @@
 .DS_Store
 .prettierignore
 
-# Ignore SASS files
-*.scss
-
 # Ignore instructions from FrontEndMentor.io
 instruction.md
 style_guide.md
