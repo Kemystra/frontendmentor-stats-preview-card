@@ -131,15 +131,5 @@ picture::after {
     width: 35%;
   }
 }
-@media only screen and (max-width: 900px) and (min-width: 501px) {
-  #title {
-    margin-bottom: 0.1vh;
-  }
-
-  #description {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */
