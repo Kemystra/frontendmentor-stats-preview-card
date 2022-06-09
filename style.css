@@ -36,10 +36,6 @@ h1 span, h2 span {
   color: hsl(277deg, 64%, 61%);
 }
 
-p {
-  font-size: 15px;
-}
-
 picture {
   position: relative;
   background: hsl(277deg, 64%, 61%);
@@ -84,13 +80,14 @@ picture::after {
 
 #title {
   font-size: 2.65vw;
-  margin-bottom: 2.5%;
+  margin-bottom: 2vh;
 }
 
 #description {
   color: hsla(0deg, 0%, 100%, 0.75);
   max-width: 350px;
   text-align: left;
+  font-size: 100%;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin-bottom: auto;
@@ -98,6 +95,7 @@ picture::after {
 }
 
 #stats-container {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -115,7 +113,7 @@ picture::after {
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0deg, 0%, 100%, 0.6);
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 85%;
   margin-top: 0.4rem;
 }
 
@@ -125,10 +123,25 @@ picture::after {
   bottom: 0;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 900px) {
+@media only screen and (max-width: 1200px) {
   #main-card {
-    height: 80%;
-    width: 35%;
+    height: 85%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 900px) and (min-width: 500px) {
+  #title {
+    margin-bottom: 0.1vh;
+  }
+
+  #description {
+    font-size: 1.6vw;
+    line-height: 150%;
+  }
+
+  .stats p {
+    font-size: 1.6vw;
+    line-height: 150%;
   }
 }
 
