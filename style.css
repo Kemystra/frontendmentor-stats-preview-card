@@ -14,7 +14,8 @@ body {
 }
 
 main {
-  width: 80%;
+  width: min(1115px, 80%);
+  max-height: 446px;
   aspect-ratio: 2.5;
   background-color: hsl(244deg, 38%, 16%);
   margin: auto;
@@ -49,6 +50,8 @@ picture {
 picture source, picture img {
   max-width: 100%;
   max-height: 100%;
+  filter: opacity(0%);
+  filter: brightness(100%);
   mix-blend-mode: multiply;
 }
 picture::after {
