@@ -181,5 +181,18 @@ picture {
 }
 
 @media only screen and (max-width: 500px) {
-    
+    h1, h2, p {
+        text-align: center;
+    }
+
+    main {
+        aspect-ratio: 1/3;
+
+        flex-direction: column;
+    }
+
+    #main-card {
+        width: 90%;
+        height: 66.667%
+    }
 }
