@@ -7,14 +7,20 @@ $soft-violet: hsl(277, 64%, 61%);
 $stats-white: hsla(0, 0%, 100%, 0.6);
 $para-white: hsla(0, 0%, 100%, 0.75);
 
-$rad: 0.4vw;
-
 @mixin thick-text {
     font-family: "Inter", sans-serif;
     font-weight: 700;
     color: white;
 
     margin: 0;
+}
+
+@mixin picture-border($is-desktop: true) {
+    @if $is-desktop {
+        border-radius: 0 var(--rad) var(--rad) 0;
+    } @else {
+        border-radius: var(--rad) var(--rad) 0 0;
+    }
 }
 
 /* Units: rem */
@@ -32,6 +38,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    --rad: 0.4vmax;
 }
 
 main {
@@ -41,7 +49,7 @@ main {
     background-color: $desat-blue;
 
     margin: auto;
-    border-radius: $rad;
+    border-radius:var(--rad);
 
     display: flex;
     flex-direction: row-reverse;
@@ -53,7 +61,7 @@ picture {
     position: relative;
     background: $soft-violet;
     height: 100%;
-    border-radius: 0 $rad $rad 0;
+    @include picture-border(true);
     aspect-ratio: 540/446;
 
     source, img {
@@ -71,7 +79,7 @@ picture {
 
         background-color: $soft-violet;
         opacity: 0.25;
-        border-radius: 0 $rad $rad 0;
+        @include picture-border(true);
     }
 }
 
@@ -85,7 +93,7 @@ picture {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    border-radius: $rad;
+    border-radius:var(--rad);
     
     /* Format of shorthands: top right bottom left
        OR top right-left bottom
@@ -168,11 +176,6 @@ picture {
 }
 
 @media only screen and (max-width: 900px) and (min-width: 500px) {
-
-    #title {
-        margin-bottom: 0.1vh;
-    }
-
     #description {
         line-height: 150%;
         font-size: 1.6vw;
@@ -185,32 +188,71 @@ picture {
 }
 
 @media only screen and (max-width: 500px) {
-    #title, #description, h2, p {
+    body {
+        height: 150vh;
+        display: block;
+        position: relative;
+        --rad: 1vmax;
+    }
+
+    #title, #description, p {
         text-align: center;
     }
 
     main {
-        height: 80vh;
         width: 90vw;
+        height: 80%;
         aspect-ratio: unset;
-        max-height: max-content;
+
+        // The unspeakably janky centering
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
 
         flex-direction: column;
-    }
-
-    #main-card {
-        width: 90%;
-        margin: 0;
     }
 
     picture {
         width: 100%;
         aspect-ratio: 654/480;
         height: unset;
-        border-radius: $rad $rad 0 0;
+        @include picture-border(false);
+
+        source, img {
+            @include picture-border(false);
+        }
 
         &::after {
-            border-radius: $rad $rad 0 0;
+            @include picture-border(false);
+        }
+    }
+
+    #main-card {
+        width: 80%;
+        height: 65%;
+        margin: auto;
+
+        align-items: center;
+    }
+
+    #title {
+        font-size: 4vh;
+        margin-top: 15px;
+    }
+
+    #description {
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    #stats-container {
+        flex-direction: column;
+        height: 50%;
+        margin-bottom: 30px;
+
+        &>div>p:nth-child(1) {
+            font-size: 3.5vh
         }
     }
 }

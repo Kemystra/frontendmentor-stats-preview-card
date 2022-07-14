@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  --rad: 0.4vmax;
 }
 
 main {
@@ -18,7 +19,7 @@ main {
   aspect-ratio: 2.5;
   background-color: hsl(244deg, 38%, 16%);
   margin: auto;
-  border-radius: 0.4vw;
+  border-radius: var(--rad);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -29,7 +30,7 @@ picture {
   position: relative;
   background: hsl(277deg, 64%, 61%);
   height: 100%;
-  border-radius: 0 0.4vw 0.4vw 0;
+  border-radius: 0 var(--rad) var(--rad) 0;
   aspect-ratio: 540/446;
 }
 picture source, picture img {
@@ -46,7 +47,7 @@ picture::after {
   height: 100%;
   background-color: hsl(277deg, 64%, 61%);
   opacity: 0.25;
-  border-radius: 0 0.4vw 0.4vw 0;
+  border-radius: 0 var(--rad) var(--rad) 0;
 }
 
 #main-card {
@@ -57,7 +58,7 @@ picture::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border-radius: 0.4vw;
+  border-radius: var(--rad);
   /* Format of shorthands: top right bottom left
      OR top right-left bottom
      OR top-bottom right-left
@@ -128,9 +129,6 @@ picture::after {
   }
 }
 @media only screen and (max-width: 900px) and (min-width: 500px) {
-  #title {
-    margin-bottom: 0.1vh;
-  }
   #description {
     line-height: 150%;
     font-size: 1.6vw;
@@ -141,28 +139,59 @@ picture::after {
   }
 }
 @media only screen and (max-width: 500px) {
-  #title, #description, h2, p {
+  body {
+    height: 150vh;
+    display: block;
+    position: relative;
+    --rad: 1vmax;
+  }
+  #title, #description, p {
     text-align: center;
   }
   main {
-    height: 80vh;
     width: 90vw;
+    height: 80%;
     aspect-ratio: unset;
-    max-height: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     flex-direction: column;
-  }
-  #main-card {
-    width: 90%;
-    margin: 0;
   }
   picture {
     width: 100%;
     aspect-ratio: 654/480;
     height: unset;
-    border-radius: 0.4vw 0.4vw 0 0;
+    border-radius: var(--rad) var(--rad) 0 0;
+  }
+  picture source, picture img {
+    border-radius: var(--rad) var(--rad) 0 0;
   }
   picture::after {
-    border-radius: 0.4vw 0.4vw 0 0;
+    border-radius: var(--rad) var(--rad) 0 0;
+  }
+  #main-card {
+    width: 80%;
+    height: 65%;
+    margin: auto;
+    align-items: center;
+  }
+  #title {
+    font-size: 4vh;
+    margin-top: 15px;
+  }
+  #description {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  #stats-container {
+    flex-direction: column;
+    height: 50%;
+    margin-bottom: 30px;
+  }
+  #stats-container > div > p:nth-child(1) {
+    font-size: 3.5vh;
   }
 }
 
