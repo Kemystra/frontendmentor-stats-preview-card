@@ -26,16 +26,6 @@ main {
   align-items: center;
 }
 
-h1, h2 {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  color: white;
-  margin: 0;
-}
-h1 span, h2 span {
-  color: hsl(277deg, 64%, 61%);
-}
-
 picture {
   position: relative;
   background: hsl(277deg, 64%, 61%);
@@ -77,17 +67,24 @@ picture::after {
 }
 
 #title {
-  font-size: 2.65vw;
-  margin-bottom: 2vh;
+  font-size: 2.5vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+#title span {
+  color: hsl(277deg, 64%, 61%);
 }
 
 #description {
   color: hsla(0deg, 0%, 100%, 0.75);
   max-width: 350px;
-  text-align: left;
-  font-size: 100%;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  font-size: 15px;
+  text-align: left;
+  margin-top: 3vh;
   margin-bottom: auto;
   line-height: 1.55rem;
 }
@@ -101,18 +98,21 @@ picture::after {
   width: 100%;
   max-width: 350px;
 }
-
-.stats h2 {
-  color: white;
-  margin: 0;
-  font-size: 1.7vw;
-}
-.stats p {
+#stats-container .stats-word {
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0deg, 0%, 100%, 0.6);
   margin: 0;
   font-size: 85%;
   margin-top: 0.4rem;
+}
+#stats-container .stats-header {
+  color: white;
+  margin: 0;
+  font-size: 1.7vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin: 0;
 }
 
 #attribution {
@@ -131,13 +131,11 @@ picture::after {
   #title {
     margin-bottom: 0.1vh;
   }
-
   #description {
     font-size: 1.6vw;
     line-height: 150%;
   }
-
-  .stats p {
+  .stats-word {
     font-size: 1.6vw;
     line-height: 150%;
   }
@@ -146,7 +144,6 @@ picture::after {
   #title, #description, h2, p {
     text-align: center;
   }
-
   main {
     height: 80vh;
     width: 90vw;
@@ -154,12 +151,10 @@ picture::after {
     max-height: max-content;
     flex-direction: column;
   }
-
   #main-card {
     width: 90%;
     margin: 0;
   }
-
   picture {
     width: 100%;
     aspect-ratio: 654/480;

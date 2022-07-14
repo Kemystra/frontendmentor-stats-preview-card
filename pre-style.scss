@@ -7,6 +7,14 @@ $para-white: hsla(0, 0%, 100%, 0.75);
 
 $rad: 8px;
 
+@mixin thick-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: white;
+
+    margin: 0;
+}
+
 /* Units: rem */
 
 * {
@@ -37,18 +45,6 @@ main {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-}
-
-h1, h2 {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    color: white;
-
-    margin: 0;
-
-    span {
-        color: $soft-violet;
-    }
 }
 
 picture {
@@ -97,20 +93,26 @@ picture {
 }
 
 #title {
-    font-size: 2.65vw;
-    margin-bottom: 2vh;
+    font-size: 2.5vw;
+
+    @include thick-text();
+
+    span {
+        color: $soft-violet;
+    }
 }
 
 #description {
     //margin-top: 2rem;
     color: $para-white;
     max-width: 350px;
-    text-align: left;
-    font-size: 100%;
-
+    
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    font-size: 15px;
+    text-align: left;
 
+    margin-top: 3vh;
     margin-bottom: auto;
 
     line-height: 1.55rem;
@@ -127,22 +129,22 @@ picture {
     width: 100%;
     max-width: 350px;
     //margin-top: 6rem;
-}
 
-.stats {
-    h2 {
-        color: white;
-        margin: 0;
-        font-size: 1.7vw;
-    }
-
-    p {
+    .stats-word {
         font-family: "Lexend Deca", sans-serif;
         color: $stats-white;
         margin: 0;
         font-size: 85%;
-
+    
         margin-top: 0.4rem;
+    }
+    
+    .stats-header {
+        color: white;
+        margin: 0;
+        font-size: 1.7vw;
+    
+        @include thick-text();
     }
 }
 
@@ -173,7 +175,7 @@ picture {
         @include paragraphs();
     }
 
-    .stats p {
+    .stats-word {
         @include paragraphs();
     }
 }
