@@ -175,7 +175,7 @@ picture::after {
     align-items: center;
   }
   #title {
-    font-size: 4vh;
+    font-size: max(4vh, 15px);
     margin-top: 15px;
   }
   #description {
@@ -189,7 +189,7 @@ picture::after {
     margin-bottom: 30px;
   }
   #stats-container > div > p:nth-child(1) {
-    font-size: 3.5vh;
+    font-size: max(3.5vh, 13px);
   }
 }
 
