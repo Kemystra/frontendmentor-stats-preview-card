@@ -18,7 +18,7 @@ main {
   aspect-ratio: 2.5;
   background-color: hsl(244deg, 38%, 16%);
   margin: auto;
-  border-radius: 8px;
+  border-radius: 0.4vw;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -29,7 +29,7 @@ picture {
   position: relative;
   background: hsl(277deg, 64%, 61%);
   height: 100%;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 0.4vw 0.4vw 0;
   aspect-ratio: 540/446;
 }
 picture source, picture img {
@@ -46,7 +46,7 @@ picture::after {
   height: 100%;
   background-color: hsl(277deg, 64%, 61%);
   opacity: 0.25;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 0.4vw 0.4vw 0;
 }
 
 #main-card {
@@ -57,7 +57,7 @@ picture::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border-radius: 8px;
+  border-radius: 0.4vw;
   /* Format of shorthands: top right bottom left
      OR top right-left bottom
      OR top-bottom right-left
@@ -66,7 +66,7 @@ picture::after {
 }
 
 #title {
-  font-size: 2.6vw;
+  font-size: 2.598544vw;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   color: white;
@@ -79,9 +79,7 @@ picture::after {
 #description {
   color: hsla(0deg, 0%, 100%, 0.75);
   max-width: 350px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
+  font: 400 15px "Inter", sans-serif;
   text-align: left;
   margin-top: 3vh;
   margin-bottom: auto;
@@ -94,17 +92,10 @@ picture::after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 350px;
+  width: 80%;
 }
-#stats-container .stats-word {
-  font-family: "Lexend Deca", sans-serif;
-  color: hsla(0deg, 0%, 100%, 0.6);
-  margin: 0;
-  font-size: 85%;
-  margin-top: 0.4rem;
-}
-#stats-container .stats-header {
+
+.stats-header {
   color: white;
   margin: 0;
   font-size: 1.7vw;
@@ -112,6 +103,13 @@ picture::after {
   font-weight: 700;
   color: white;
   margin: 0;
+}
+
+.stats-word {
+  font: 85% "Lexend Deca", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  margin: 0;
+  margin-top: 0.4rem;
 }
 
 #attribution {
@@ -134,12 +132,12 @@ picture::after {
     margin-bottom: 0.1vh;
   }
   #description {
-    font-size: 1.6vw;
     line-height: 150%;
+    font-size: 1.6vw;
   }
-  .stats-word {
-    font-size: 1.6vw;
-    line-height: 150%;
+  #stats-container > div > p:nth-child(2) {
+    font: 1.3vw "Lexend Deca", sans-serif;
+    outline: 1px red solid;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -161,10 +159,10 @@ picture::after {
     width: 100%;
     aspect-ratio: 654/480;
     height: unset;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0.4vw 0.4vw 0 0;
   }
   picture::after {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0.4vw 0.4vw 0 0;
   }
 }
 

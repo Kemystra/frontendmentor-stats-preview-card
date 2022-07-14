@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $dark-blue: hsl(233, 47%, 7%);
 $desat-blue: hsl(244, 38%, 16%);
 $soft-violet: hsl(277, 64%, 61%);
@@ -5,7 +7,7 @@ $soft-violet: hsl(277, 64%, 61%);
 $stats-white: hsla(0, 0%, 100%, 0.6);
 $para-white: hsla(0, 0%, 100%, 0.75);
 
-$rad: 8px;
+$rad: 0.4vw;
 
 @mixin thick-text {
     font-family: "Inter", sans-serif;
@@ -93,7 +95,11 @@ picture {
 }
 
 #title {
-    font-size: 2.6vw;
+    // This is a hack (well, a good one). 1.612 is the square root of 2.6
+    // 2.6vw is the correct text size at dimension 1440x800
+    // I think it helps the text to expand exponentially
+    // See Inverse Square Law
+    font-size: 1.612 * 1.612vw;
 
     @include thick-text();
 
@@ -107,9 +113,7 @@ picture {
     color: $para-white;
     max-width: 350px;
     
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
+    font: 400 15px "Inter", sans-serif;
     text-align: left;
 
     margin-top: 3vh;
@@ -126,36 +130,29 @@ picture {
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
-    max-width: 350px;
-    //margin-top: 6rem;
+    width: 80%;
+}
 
-    .stats-word {
-        font-family: "Lexend Deca", sans-serif;
-        color: $stats-white;
-        margin: 0;
-        font-size: 85%;
-    
-        margin-top: 0.4rem;
-    }
-    
-    .stats-header {
-        color: white;
-        margin: 0;
-        font-size: 1.7vw;
-    
-        @include thick-text();
-    }
+.stats-header {
+    color: white;
+    margin: 0;
+    font-size: 1.7vw;
+
+    @include thick-text();
+}
+
+.stats-word {
+    font: 85% "Lexend Deca", sans-serif;
+    color: $stats-white;
+    margin: 0;
+
+    margin-top: 0.4rem;
 }
 
 #attribution {
     color: $para-white;
     position: absolute;
     bottom: 0;
-}
-
-@media only screen and (min-width: 1500px) {
-
 }
 
 @media only screen and (max-width: 1200px){
@@ -171,21 +168,19 @@ picture {
 }
 
 @media only screen and (max-width: 900px) and (min-width: 500px) {
-    @mixin paragraphs {
-        font-size: 1.6vw;
-        line-height: 150%;
-    }
 
     #title {
         margin-bottom: 0.1vh;
     }
 
     #description {
-        @include paragraphs();
+        line-height: 150%;
+        font-size: 1.6vw;
     }
 
-    .stats-word {
-        @include paragraphs();
+    #stats-container>div>p:nth-child(2) {
+        font: 1.3vw "Lexend Deca", sans-serif;
+        outline: 1px red solid;
     }
 }
 
