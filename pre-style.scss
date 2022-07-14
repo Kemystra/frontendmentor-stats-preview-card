@@ -23,8 +23,6 @@ $para-white: hsla(0, 0%, 100%, 0.75);
     }
 }
 
-/* Units: rem */
-
 * {
     box-sizing: border-box;
 }
@@ -44,7 +42,6 @@ body {
 
 main {
     width: 78%;
-    //max-height: 446px;
     aspect-ratio: 2.5;
     background-color: $desat-blue;
 
@@ -84,7 +81,6 @@ picture {
 }
 
 #main-card {
-    //padding: min(6%, 4rem) min(10%, 8rem) min(5%, 4rem) min(7%, 5rem);
     height: 71%;
     margin-left: 5vw;
     width: 40%;
@@ -171,7 +167,6 @@ picture {
 
     #title {
         margin-bottom: 0.1vh;
-        //font-size: 3vw;
     }
 }
 
@@ -183,7 +178,6 @@ picture {
 
     #stats-container>div>p:nth-child(2) {
         font: 1.3vw "Lexend Deca", sans-serif;
-        outline: 1px red solid;
     }
 }
 
